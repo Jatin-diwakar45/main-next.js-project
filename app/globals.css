@@ -1,0 +1,344 @@
+/* Global styles are imported in layout.js via link tags */
+html,
+body {
+  overflow-x: clip;
+  position: relative;
+  width: 100%;
+}
+
+.xb-project-item {
+  overflow: visible !important;
+}
+
+/* Global Image Shadow */
+img:not(.no-shadow) {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Exclusions for logos, icons, and specific UI elements */
+.logo img,
+.preloader-logo,
+.xb-item--icon img,
+.icon img,
+.xb-footer-info-list li .icon,
+.xb-item--social img,
+.no-shadow {
+  box-shadow: none !important;
+}
+
+/* CSS Marquee Animation - Improved */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  flex-shrink: 0;
+  will-change: transform;
+}
+
+.marquee-left-anim {
+  animation: marquee-left 40s linear infinite;
+}
+
+.marquee-right-anim {
+  animation: marquee-right 40s linear infinite;
+}
+
+/* Specific faster speeds if needed */
+.marquee-fast {
+  animation-duration: 20s;
+}
+
+/* Pause on hover */
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Custom styles for image items to match the "rounded" look in screenshot */
+.xb-about-img-item,
+.xb-marquee-item {
+  flex-shrink: 0;
+  padding: 0 15px;
+}
+
+/* --- Professional Footer Styles --- */
+.xb-footer-widget .widget-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.xb-footer-widget .widget-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+.xb-footer-info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.xb-footer-info-list li .icon {
+  flex-shrink: 0;
+  width: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.xb-footer-info-list li .text {
+  color: #b2b3b7;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.xb-footer-info-list li .text a {
+  color: inherit;
+}
+
+.xb-footer-info-list li .text a:hover {
+  color: var(--color-primary);
+}
+
+.xb-footer-social ul {
+  display: flex;
+  gap: 12px;
+}
+
+.xb-footer-social ul li a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.xb-footer-social ul li a:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #000;
+  transform: translateY(-3px);
+}
+
+.xb-footer-menu li {
+  margin-bottom: 12px;
+}
+
+.xb-footer-menu li a {
+  color: #b2b3b7;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 0;
+}
+
+.xb-footer-menu li a:hover {
+  color: var(--color-primary);
+  padding-left: 8px;
+}
+
+.xb-footer-menu li a::before {
+  content: "→";
+  position: absolute;
+  left: -20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.xb-footer-menu li a:hover::before {
+  left: -12px;
+  opacity: 1;
+}
+
+.xb-footer-newsletter-form {
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.xb-footer-newsletter-form input[type="email"] {
+  flex: 1;
+  background-color: #fff !important;
+  color: #000 !important;
+  border: none !important;
+  padding: 10px 25px !important;
+  height: 45px !important;
+  font-size: 15px !important;
+  border-radius: 50px !important;
+}
+
+.xb-footer-newsletter-form input[type="email"]:focus {
+  outline: none !important;
+  background-color: #fff !important;
+}
+
+.xb-footer-newsletter-form button {
+  background-color: var(--color-primary);
+  color: #000;
+  border: none;
+  padding: 0 35px;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.xb-footer-newsletter-form button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.xb-footer-bottom-professional {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 0;
+}
+
+.xb-footer-bottom-professional .copyright-text p {
+  color: #b2b3b7;
+  font-size: 14px;
+}
+
+.xb-footer-bottom-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+.xb-footer-bottom-links li a {
+  color: #b2b3b7;
+  font-size: 14px;
+}
+
+.xb-footer-bottom-links li a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 991px) {
+  .xb-footer-bottom-links {
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
+
+
+  .xb-footer-heading .title {
+    font-size: 36px !important;
+  }
+}
+
+/* Footer Stabilization to fix scrolling glitches */
+.footer-style-one {
+  background-attachment: scroll !important;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.xb-footer-top {
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Custom Logo Preloader --- */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00020f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  overflow: hidden;
+}
+
+.preloader-inner {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  animation: preloader-rotate 1.5s linear infinite;
+}
+
+.preloader-logo {
+  width: 90px;
+  height: auto;
+  z-index: 1;
+  animation: preloader-pulse 2s ease-in-out infinite;
+}
+
+@keyframes preloader-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-pulse {
+
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
