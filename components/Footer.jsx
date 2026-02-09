@@ -23,7 +23,7 @@ const Footer = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="xb-footer-heading">
-                                <h2 className="title" style={{ fontSize: '48px', color: '#fff', marginBottom: '20px' }}>Kloudon Technologies</h2>
+                                <h2 className="title" style={{ fontSize: '30px', color: '#fff', marginBottom: '20px' }}>Kloudon<br />Technologies</h2>
                                 <p style={{ color: '#b2b3b7', maxWidth: '500px', fontSize: '18px' }}>
                                     Empowering businesses with cutting-edge AI solutions and innovative technology strategies. Join us in shaping the future.
                                 </p>

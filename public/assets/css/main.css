@@ -17011,12 +17011,14 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
 
 .xb-footer-heading {
   position: relative;
+  text-align: center;
 }
 
 .xb-footer-heading .title {
+  padding-left: 10%;
   font-weight: 900;
   font-size: 347px;
-  text-align: center;
+  text-align: left;
   color: #121521;
   letter-spacing: 0.02em;
   text-transform: uppercase;

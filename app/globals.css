@@ -342,3 +342,27 @@ img:not(.no-shadow) {
     transform: scale(1.05);
   }
 }
+
+/* Logo resizing - 10% reduction for PC, 20% for mobile */
+.xb-header-logo img,
+.logo1 img,
+.xb-logo-mobile img {
+  height: auto !important;
+  transition: width 0.3s ease;
+}
+
+/* PC View (Desktop) - 10% reduction */
+@media (min-width: 992px) {
+  .xb-header-logo img,
+  .logo1 img {
+    width: 153px !important; /* Original estimated ~170px, 10% reduction */
+  }
+}
+
+/* Mobile View - 20% reduction */
+@media (max-width: 991px) {
+  .xb-header-logo img,
+  .xb-logo-mobile img {
+    width: 120px !important; /* Original estimated ~150px, 20% reduction */
+  }
+}
