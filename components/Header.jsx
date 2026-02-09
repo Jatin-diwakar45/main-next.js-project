@@ -192,6 +192,77 @@ const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
+                                    <li className="menu-item-has-children megamenu">
+                                        <Link href="#!"><span>Services</span></Link>
+                                        <ul className="submenu">
+                                            <li>
+                                                <div className="mega_menu_wrapper">
+                                                    <div className="container-fluid p-0">
+                                                        <div className="mega_menu_wrapper_inner">
+                                                            <div className="row mt-none-30">
+                                                                <div className="col-12 mt-30">
+                                                                    <div className="megamenu_pages_wrapper">
+                                                                        <div className="row g-10">
+                                                                            <div className="col-xl-4 col-lg-4">
+                                                                                <Link className="iconbox_block_2" href="/service">
+                                                                                    <span className="icon_title_wrap">
+                                                                                        <small className="iconbox_icon">
+                                                                                            <img src="/assets/img/icon/service-icon01.svg" alt="" />
+                                                                                        </small>
+                                                                                        <small className="iconbox_title">Web Development</small>
+                                                                                    </span>
+                                                                                </Link>
+                                                                            </div>
+                                                                            <div className="col-xl-4 col-lg-4">
+                                                                                <Link className="iconbox_block_2" href="/service">
+                                                                                    <span className="icon_title_wrap">
+                                                                                        <small className="iconbox_icon">
+                                                                                            <img src="/assets/img/icon/service-icon02.svg" alt="" />
+                                                                                        </small>
+                                                                                        <small className="iconbox_title">App Development</small>
+                                                                                    </span>
+                                                                                </Link>
+                                                                            </div>
+                                                                            <div className="col-xl-4 col-lg-4">
+                                                                                <Link className="iconbox_block_2" href="/service">
+                                                                                    <span className="icon_title_wrap">
+                                                                                        <small className="iconbox_icon">
+                                                                                            <img src="/assets/img/icon/service-icon03.svg" alt="" />
+                                                                                        </small>
+                                                                                        <small className="iconbox_title">AI/ML Development</small>
+                                                                                    </span>
+                                                                                </Link>
+                                                                            </div>
+                                                                            <div className="col-xl-4 col-lg-4">
+                                                                                <Link className="iconbox_block_2" href="/service">
+                                                                                    <span className="icon_title_wrap">
+                                                                                        <small className="iconbox_icon">
+                                                                                            <img src="/assets/img/icon/service-icon04.svg" alt="" />
+                                                                                        </small>
+                                                                                        <small className="iconbox_title">Cloud Computing</small>
+                                                                                    </span>
+                                                                                </Link>
+                                                                            </div>
+                                                                            <div className="col-xl-4 col-lg-4">
+                                                                                <Link className="iconbox_block_2" href="/service">
+                                                                                    <span className="icon_title_wrap">
+                                                                                        <small className="iconbox_icon">
+                                                                                            <img src="/assets/img/icon/service-icon05.svg" alt="" />
+                                                                                        </small>
+                                                                                        <small className="iconbox_title">Digital Marketing</small>
+                                                                                    </span>
+                                                                                </Link>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
 
                                     <li className=""><Link href="/about"><span>About Us</span></Link></li>
                                     <li><Link href="/contact"><span>Contact Us</span></Link></li>
@@ -227,6 +298,14 @@ const Header = () => {
                                             <Link href="/" onClick={closeMenu}><span>Home</span></Link>
                                         </li>
                                         <li><Link href="/about" onClick={closeMenu}><span>about us</span></Link></li>
+                                        <li className={`menu-item menu-item-has-children ${activeSubMenu === 'm-product' ? 'active' : ''}`}>
+                                            <a href="#!" onClick={(e) => e.preventDefault()}><span>product</span></a>
+                                            <span className={`xb-menu-toggle ${activeSubMenu === 'm-product' ? 'active' : ''}`} onClick={() => toggleSubMenu('m-product')}></span>
+                                            <ul className={`sub-menu ${activeSubMenu === 'm-product' ? 'active' : ''}`} style={{ display: activeSubMenu === 'm-product' ? 'block' : 'none' }}>
+                                                <li><a href="https://wa.me/919105597548" onClick={closeMenu}><span>WhatsApp API</span></a></li>
+                                                <li><Link href="#!" onClick={closeMenu}><span>ERP Model</span></Link></li>
+                                            </ul>
+                                        </li>
                                         <li className={`menu-item menu-item-has-children ${activeSubMenu === 'm-page' ? 'active' : ''}`}>
                                             <a href="#!" onClick={(e) => e.preventDefault()}><span>page</span></a>
                                             <span className={`xb-menu-toggle ${activeSubMenu === 'm-page' ? 'active' : ''}`} onClick={() => toggleSubMenu('m-page')}></span>
@@ -242,8 +321,11 @@ const Header = () => {
                                             <a href="#!" onClick={(e) => e.preventDefault()}><span>services</span></a>
                                             <span className={`xb-menu-toggle ${activeSubMenu === 'm-services' ? 'active' : ''}`} onClick={() => toggleSubMenu('m-services')}></span>
                                             <ul className={`sub-menu ${activeSubMenu === 'm-services' ? 'active' : ''}`} style={{ display: activeSubMenu === 'm-services' ? 'block' : 'none' }}>
-                                                <li><Link href="/service" onClick={closeMenu}><span>Services</span></Link></li>
-                                                <li><Link href="/service-details" onClick={closeMenu}><span>Service Details</span></Link></li>
+                                                <li><Link href="/service" onClick={closeMenu}><span>Web Development</span></Link></li>
+                                                <li><Link href="/service" onClick={closeMenu}><span>App Development</span></Link></li>
+                                                <li><Link href="/service" onClick={closeMenu}><span>AI/ML Development</span></Link></li>
+                                                <li><Link href="/service" onClick={closeMenu}><span>Cloud Computing</span></Link></li>
+                                                <li><Link href="/service" onClick={closeMenu}><span>Digital Marketing</span></Link></li>
                                             </ul>
                                         </li>
                                         <li><Link href="/contact" onClick={closeMenu}><span>Contact Us</span></Link></li>
