@@ -5,26 +5,13 @@ import React from 'react';
 const DataDeletionPage = () => {
     return (
         <>
-            {/* Local CSS to fix navbar visibility on this specific page */}
-            <style jsx global>{`
-                #xb-header-area.header-transparent {
-                    background-color: #00020f !important;
-                    position: sticky !important;
-                    top: 0;
-                    z-index: 1000;
-                }
-                .body_wrap {
-                    background-color: #f3f4f6 !important;
-                }
-            `}</style>
-
-            <main className="data-deletion-area pt-100 pb-100" style={{ backgroundColor: '#f3f4f6', minHeight: 'calc(100vh - 100px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <main className="data-deletion-area pt-150 pb-150" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
                     <div className="data-deletion-box" style={{
                         backgroundColor: '#ffffff',
                         padding: '80px 60px',
                         borderRadius: '32px',
-                        boxShadow: '0 20px 50px rgba(0, 0, 0, 0.05)',
+                        boxShadow: '0 20px 50px rgba(0, 0, 0, 0.3)',
                         maxWidth: '900px',
                         width: '100%',
                         textAlign: 'center'
